@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Site pédagogique sur les villes intelligentes et l’urbanisation au Cameroun">
+        <title>Cas d’usage urbains | Smart Cities Cameroun</title>
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+        <body>
+            <header>
+                <div class="bar">
+                    <a class="brand" href="index.html">🌍 SMART<span>CITIES</span> BS&BMB</a>
+                    <button class="menu" aria-label="Afficher le menu">☰ Menu</button>
+                    <nav aria-label="Navigation principale">
+                        <a class="" href="index.html">Accueil</a>
+                        <a class="" href="technologies.html">Technologies</a>
+                        <a class="active" href="cas-usage.html">Cas d’usage</a>
+                        <a class="" href="villes.html">Villes camerounaises</a>
+                        <a class="" href="benefices.html">Apports & défis</a>
+                        <a class="" href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <section class="pagehead">
+                    <div class="wrap">
+                    <h1>Cas d’usage urbains</h1>
+                    <p>Des exemples concrets et interactifs de services urbains intelligents.</p>
+                    </div>
+                </section>
+                <section class="section ">
+                    <div class="wrap">
+                        <h2>Explorer par domaine</h2>
+                        <p class="lead">Cliquez sur une catégorie pour découvrir un scénario d’application.</p>
+                        <div class="tabs">
+                            <button class="on" data-tab="mobilite">🚦 Mobilité</button>
+                            <button data-tab="energie">💡 Énergie</button>
+                            <button data-tab="dechets">♻️ Déchets</button>
+                            <button data-tab="eau">🌧️ Eau</button>
+                        </div>
+                        <div id="tab-content" class="panel">
+                            <h3>Mobilité intelligente</h3>
+                            <p>La mobilité intelligente est l'utilisation des technologies modernes, notamment l'intelligence artificielle (IA), l'Internet des objets (IoT), les capteurs et les systèmes de communication, pour améliorer les déplacements des personnes et des marchandises.
+Elle représente une solution importante pour améliorer les transports dans les villes modernes. Grâce aux technologies numériques, permet de réduire les embouteillages, d'améliorer la sécurité routière et de protéger l'environnement.vise à rendre les transports plus rapides, plus sûrs, plus économiques et plus respectueux de l'environnement.
+La mobilité intelligente constitue l'un des piliers essentiels de la ville intelligente (Smart City). Feux adaptatifs, suivi des bus, informations sur les trajets et signalement des embouteillages. elle utilise les technologies comme: Internet des objets (IoT) pour Connecter les véhicules et les infrastructures, le GPS pour Localiser les véhicules en temps réel</p>
+                            <p><strong>Exemple conceptuel :</strong> tableau de bord des temps de parcours à Douala.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section band">
+                    <div class="wrap">
+                        <h2>Mini-démonstration interactive</h2>
+                        <p>Simulation locale : elle illustre le principe d’un tableau de bord, sans connexion à des équipements réels.</p>
+                        <div class="sim smart-demo" aria-label="Simulation d’éclairage et de sirène">
+                            <div class="demo-objects">
+                                <div class="demo-item">
+                                    <div id="lamp-visual" class="lamp-visual" role="img" aria-label="Lampe éteinte">
+                                        <div class="lamp-bulb">💡</div>
+                                        <div class="lamp-glow"></div>
+                                    </div>
+                                    <p>Éclairage public : <strong id="lamp" class="stat" aria-live="polite">Éteint</strong></p>
+                                </div>
+                                <div class="demo-item">
+                                    <div id="siren-visual" class="siren-visual" role="img" aria-label="Sirène inactive">
+                                        <div class="siren-dome"></div>
+                                        <div class="siren-base"></div>
+                                    </div>
+                                    <p>Alerte : <strong id="alarm" class="stat" aria-live="polite">Inactive</strong></p>
+                                </div>
+                            </div>
+                            <p>⚡ Consommation simulée : <span id="cons" class="stat">0 W</span></p>
+                            <div class="demo-controls">
+                                <button id="lamp-button" type="button" onclick="sim('lamp')" aria-pressed="false">💡 Basculer l’éclairage</button>
+                                <button id="alarm-button" type="button" onclick="sim('alarm')" aria-pressed="false">🚨 Basculer l’alerte</button>
+                            </div>
+                            <p class="demo-note">La lampe s’illumine et la sirène rouge clignote avec un son d’alarme. Le son démarre après un clic et s’arrête lorsque l’alerte est désactivée. Démonstration virtuelle : aucun équipement réel n’est commandé.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section" id="simulations-habitat">
+                    <div class="wrap">
+                        <h2>🏡 Laboratoire de maison intelligente </h2>
+                        <p class="lead">Manipulez la porte à la voix, les fenêtres et la télévision. Les animations reproduisent les actions en direct dans le navigateur, sans piloter de vrais équipements.</p>
+                        <div class="habitat-grid">
+<article class="habitat-card">
+    <h3>🎙️ 1. Porte à commande vocale</h3>
+    <p>Dites « SADOU ouvre la porte », puis « SADOU ferme toi ».</p>
+    <div class="door-scene">
+        <div class="door-frame">
+            <div class="door-panel" id="voice-door">
+                <span class="door-knob"></span>
+                <span class="door-number">SADOU</span>
+            </div>
+            <div class="door-inside">🚪<small>Entrée</small></div>
+        </div></div>
+        <p class="device-state" id="door-status" aria-live="polite">🔒 Porte fermée</p>
+        <div class="device-buttons">
+            <button type="button" id="mic-start">🎤 Activer le micro</button>
+            <button type="button" id="mic-stop" disabled>⏹ Arrêter</button>
+        </div>
+        <p class="voice-feedback" id="voice-feedback" aria-live="polite">Cliquez sur « Activer le micro » puis autorisez son accès.</p>
+        <p class="device-hint">Pour tester sans microphone :</p>
+        <div class="device-buttons">
+            <button type="button" id="door-open">Ouvrir</button>
+            <button type="button" id="door-close">Fermer</button>
+        </div>
+    </article>
+<article class="habitat-card">
+    <h3>🪟 2. Fenêtres automatiques</h3>
+    <p>Les deux battants s'écartent ou se rejoignent à chaque commande.</p>
+    <div class="window-scene">
+        <div class="window-frame">
+            <div class="window-view">☀️<span>🌳</span>
+            </div>
+            <div class="window-shutter left" id="window-left"><span></span></div>
+            <div class="window-shutter right" id="window-right"><span></span></div>
+        </div>
+    </div>
+    <p class="device-state" id="window-status" aria-live="polite">🔒 Fenêtres fermées</p>
+    <div class="device-buttons">
+        <button type="button" id="window-open">🪟 Ouvrir</button>
+        <button type="button" id="window-close">🔒 Fermer</button>
+    </div>
+</article>
+<article class="habitat-card">
+    <h3>📺 3. Télévision intelligente</h3>
+    <p>Allumez l'écran pour afficher un message de bienvenue personnalisé.</p>
+    <div class="tv-scene">
+        <div class="tv-screen" id="tv-screen">
+            <div class="tv-off" id="tv-off">ÉCRAN ÉTEINT</div>
+            <div class="tv-welcome" id="tv-welcome" hidden>
+                <span class="tv-spark">✦ ✧ ✦</span>
+                <strong>BIENVENUE SADOU</strong>
+                <small>SMARTCITIES CM · Habitat connecté</small>
+            </div>
+        </div>
+        <div class="tv-stand"></div>
+    </div>
+    <p class="device-state" id="tv-status" aria-live="polite">⚫ Télévision éteinte</p>
+    <div class="device-buttons">
+        <button type="button" id="tv-on">📺 Allumer la télévision</button>
+        <button type="button" id="tv-off-button">⏻ Éteindre</button>
+    </div>
+</article>
+</div>
+<p class="demo-note">ℹ️ Reconnaissance vocale : nécessite un navigateur compatible (Chrome ou Edge conseillé), l'autorisation du microphone et, selon le navigateur, une connexion Internet ou une page servie en HTTPS/localhost. Les boutons manuels restent utilisables hors ligne.</p>
+</div>
+</section>
+<section class="section photo-section">
+    <div class="wrap">
+        <h2>Exemples concrets : habitat, sécurité et énergie</h2>
+        <p class="lead">Quelques usages à l’échelle des bâtiments, pouvant s’intégrer à une réflexion plus large sur l’urbanisation.</p>
+        <div class="photo-grid">
+            <figure class="photo-card"><img src="assets/images/habitat-connecte.jpg" alt="Une maison entièrement connectée" loading="lazy">
+                <figcaption>
+                <h3>Une maison entièrement connectée</h3>
+                <p>Ce schéma présente les équipements qui peuvent être automatisés dans un habitat : portes, fenêtres, volets, alarmes, caméras et éclairage. La domotique constitue un exemple concret des services numériques intégrés à une ville intelligente.</p>
+            </figcaption>
+        </figure>
+        <figure class="photo-card"><img src="assets/images/acces-intelligent.jpg" alt="La sécurité et les accès intelligents" loading="lazy">
+            <figcaption>
+                <h3>La sécurité et les accès intelligents</h3>
+                <p>Une serrure et des ouvertures connectées peuvent être commandées à distance. Cette technologie illustre le rôle des objets connectés dans la sécurité des bâtiments, avec une attention particulière à la protection des données.</p>
+            </figcaption>
+        </figure>
+        <figure class="photo-card"><img src="assets/images/pilotage-energie.jpg" alt="Le pilotage intelligent des équipements" loading="lazy">
+            <figcaption>
+                <h3>Le pilotage intelligent des équipements</h3>
+                <p>Des commandes murales permettent de gérer l’ambiance et les appareils d’un logement. Associées à des capteurs, elles peuvent contribuer à limiter les consommations inutiles d’électricité.</p>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+</section>
+<section class="page-navigation" aria-label="Navigation de fin de page">
+    <div class="wrap">
+        <p class="page-count">Page 3 sur 6 · SMARTCITIES BS&BMB</p>
+        <a class="btn return-home" href="index.html">← Retour à l’accueil</a>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="wrap"><div><strong>SMARTCITIES CM</strong><br>Projet pédagogique — ville intelligente au Cameroun</div>
+    <div>Conception : BOUBAKARI SADOU ET BADANE MAÏDE BENITA<br>HTML • CSS • JavaScript · 2026</div>
+</div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
